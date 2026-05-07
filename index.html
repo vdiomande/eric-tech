@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MatchMe — Find Your Study Buddy</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>BtechMatchMe</h1>
+    <p>Find a study buddy or club partner at Btech</p>
+  </header>
+
+  <nav class="nav-bar">
+    <a href="#profile">Your Profile</a>
+    <a href="#preferences">Your Preferences</a>
+    <a href="#submit">Submit</a>
+  </nav>
+
+  <main class="layout">
+    <section class="card" id="profile">
+      <h2>Your Profile</h2>
+
+      <form action="results.html" method="get" class="match-form">
+        <fieldset>
+          <legend>About You</legend>
+
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="First name" required />
+          </div>
+
+          <div class="form-row">
+            <label for="age">Age</label>
+            <input id="age" name="age" type="number" min="13" max="99" placeholder="e.g., 16" required />
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="name@email.com" required />
+          </div>
+
+          <div class="form-row">
+            <label for="bio">Short Bio</label>
+            <textarea id="bio" name="bio" placeholder="3–5 sentences about you..." required></textarea>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Interests</legend>
+
+          <p class="helper">Pick at least 2:</p>
+
+          <div class="inline-group">
+            <label><input type="checkbox" name="interests" value="Gaming" /> Gaming</label>
+            <label><input type="checkbox" name="interests" value="Sports" /> Sports</label>
+            <label><input type="checkbox" name="interests" value="Music" /> Music</label>
+            <label><input type="checkbox" name="interests" value="Art" /> Art</label>
+            <label><input type="checkbox" name="interests" value="Coding" /> Coding</label>
+            <label><input type="checkbox" name="interests" value="Reading" /> Reading</label>
+            <label><input type="checkbox" name="interests" value="Movies" /> Movies</label>
+            <label><input type="checkbox" name="interests" value="Anime" /> Anime</label>
+          </div>
+
+          <div class="form-row">
+            <label for="studyStyle">Study Style</label>
+            <select id="studyStyle" name="studyStyle" required>
+              <option value="">-- Choose one --</option>
+              <option value="Quiet & focused">Quiet & focused</option>
+              <option value="Talk it out">Talk it out</option>
+              <option value="Flashcards & drills">Flashcards & drills</option>
+              <option value="Group study">Group study</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <section class="card" id="preferences">
+          <h2>Your Match Preferences</h2>
+
+          <fieldset>
+            <legend>Looking For</legend>
+
+            <div class="form-row">
+              <label>Match Type</label>
+              <div class="inline-group">
+                <label><input type="radio" name="matchType" value="Study Buddy" required /> Study Buddy</label>
+                <label><input type="radio" name="matchType" value="Club Partner" /> Club Partner</label>
+                <label><input type="radio" name="matchType" value="Friend" /> Friend</label>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label for="minAge">Preferred Age Range</label>
+              <div class="two-col">
+                <input id="minAge" name="minAge" type="number" min="13" max="99" placeholder="Min" required />
+                <input id="maxAge" name="maxAge" type="number" min="13" max="99" placeholder="Max" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label for="distance">Max Distance (miles)</label>
+              <input id="distance" name="distance" type="range" min="1" max="50" value="10" />
+              <small class="muted">Tip: Range sliders work great for preferences.</small>
+            </div>
+
+            <div class="form-row">
+              <label for="availability">Availability</label>
+              <select id="availability" name="availability" required>
+                <option value="">-- Choose one --</option>
+                <option value="After school">After school</option>
+                <option value="Weekends">Weekends</option>
+                <option value="Evenings">Evenings</option>
+                <option value="Flexible">Flexible</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label for="mustHave">Must-Have Trait</label>
+              <input id="mustHave" name="mustHave" type="text" placeholder="e.g., Patient, Motivated" />
+            </div>
+          </fieldset>
+        </section>
+
+        <section class="card" id="submit">
+          <h2>Submit</h2>
+          <p class="muted">
+            This demo doesn’t “match” users automatically yet — it collects data using HTML forms.
+            Next step would be JavaScript or a backend.
+          </p>
+
+          <div class="inline-group">
+            <label><input type="checkbox" name="agree" value="yes" required /> I agree to be respectful.</label>
+          </div>
+
+          <input type="submit" value="Find My Match" class="btn" />
+        </section>
+
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p><b>© 2026 BtechMatchMe — Mr. Diomande HTML Forms </b> </p>
+  </footer>
+
+</body>
+</html>
